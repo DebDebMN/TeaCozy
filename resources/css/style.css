@@ -1,0 +1,22 @@
+/* This is the css file for Codecademy's Unit 4 Tea Cozy project: index.html.  */
+
+/* Style for whole page for font. */
+body {
+  font-family: Helvetica;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+}
+
+/* Style navigation links for whole page. */
+a:link,
+a:visited {
+  color: seashell;
+}
+
+/* mouse over link */
+a:hover {
+    color: yellow;
+}
