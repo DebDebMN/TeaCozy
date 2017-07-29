@@ -20,3 +20,39 @@ a:visited {
 a:hover {
     color: yellow;
 }
+
+/*  Syle header.  There are two parts: logo and navigation.  */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  border-style: none none solid none;
+  border-width: 0 0 1 0;
+  border-color: none none seashell none;
+  background-color: black;
+  color: seashell;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 69px;
+  z-index: 2;
+}
+
+  .header-logo {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+
+  .headerlist li {
+    display: inline-block;
+  }
+  .header-items {
+    padding-right: 5px;
+  }
+
+  .nav-item-box{
+    padding-left: 30px;
+  }
+
+  .
