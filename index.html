@@ -9,10 +9,10 @@
 <body>
 
 <!--  This project consists of the following major containers:
-      - HEADER:    logo and navigation to sections below
+      - HEADER:    logo and navigation that points to sections below
       - MISSION:   mission of company
-      - TEA-OTM:   tea of the month with pictures
-      - LOCALS:    highlighting three locations within Portland, Maine
+      - TEA-OTM:   tea of the month (tea-otm) with pictures
+      - LOCALS:    highlights to three locations within Portland, Maine
       - FOOTER:    company name and contact info
       - COPYRT:    copyright - plain text, not too big
 -->
@@ -43,10 +43,33 @@
     </div> <!-- for header-nav-container -->
   </div> <!-- for header-container -->
 
+<!-- MISSION
+     - Note that the specification calls for an image height of 700px.  This is
+       specified in teh img src statement.
+-->
   <div class="mission-container">
+    <div class="mission-img">
+      <img src="./resources/images/img-mission-background.jpg" height="700" weight="1200"/>
+    </div>
+    <div class="mission-text-container">
+      <div class="mission-text">
+        <h2>Our Mission</h2>
+        <h4>Handpicked, Artisanally Curated, Free Range, Sustainable, Small Batch, Fair Trade, Organic Tea</h4>
+      </div>
+
+    </div>
   </div> <!-- for mission-container -->
 
+  <!-- TEA OF THE MONTH
+       - Note that this secion has a header text, followed by pictures of each
+         of the teas with identifying text associated with each picture.  The
+         size of the team images are noted in the specification and are used here.
+  -->
   <div class="tea-otm-container">
+    <div class="tea-otm-header-text">
+      <h2>Tea of the Month</h2>
+      <h4>What's Steeping at The Tea Cozy?</h4>
+    </div>
   </div> <!-- for tea-otm-container -->
 
   <div class="locals-container">
