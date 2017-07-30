@@ -8,6 +8,7 @@ body {
   background-color: black;
   opacity: 0.9;
   text-align: center;
+  justify-content: center;
 }
 
 /* Style navigation links for whole page. */
@@ -21,7 +22,10 @@ a:hover {
     color: yellow;
 }
 
-/*  Syle the HEADER.  There are two parts: logo and navigation.
+/*  *************************************
+    ********   Syle the HEADER.  ********
+    *************************************
+    There are two parts: logo and navigation.
     - Note that the header section must remain fixed in the browser window therefore
       the position is fixed.
     - Note the specific height set for the container.  This is to ensure that
@@ -39,7 +43,7 @@ a:hover {
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 67.76px;
+  height: 68.76px;
   z-index: 100;
 }
 
@@ -60,29 +64,48 @@ a:hover {
     padding-left: 30px;
   }
 
+  .main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-/*  Style the MISSION area.  There are two parts: the picture and the centered mission text.
+  /* *********************************************
+     ********   Style the MISSION area.   ********
+     *********************************************
+
+    There are two parts: the picture and the centered mission text.
     - Note that the image is positioned relative (and top defined) so that it will
       meet the fixed position header correctly.
+    - Size of the image, box, font and centering were specified in the spec.
 */
 .mission-container {
   display: flex;
   position:relative;
-  top: 70px;
+  top: 65px;  /* note that "top" is actully 70px however Chrome places space between
+                 border and image even though there is no padding, border, or margine on the image.
+                 So 65px "squeezes" out the space. */
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.mission-image {
+.mission-img {
   display: flex;
+  height: 700px;
+  weight: 1200px;
   z-index: 50;
+}
+
+/* resize image */
+.mission-image img {
+    width: 100%;
+    height: auto;
 }
 /* Note that the mission statement is centered on top of the mission picture within a black box.
     - In order to accomplish this, z-index was used to prioritize the display
       of the box over the image.
-    - Size of the image, box, font and centering were specified in the spec.
-    - Note that line-height had to be used to shrink the standard spacing in
-      order to appear as the spec looked.
+
 */
 .mission-text-container {
   position:relative;
@@ -90,8 +113,8 @@ a:hover {
   width: 1200px;
   height: 100px;
   /* Place the text box half way up the image:
-        Note that height of the image is at 700. So:
-              700
+        Note that height of the image AREA is at 800 plus 70 for header. So:
+              870
              -350   for height of text box
              - 50   for half of the height of the text box
              -----
@@ -104,12 +127,57 @@ a:hover {
 
 }
 
+/* - Note that line-height had to be used to shrink the standard spacing in
+  order to appear as the spec looked. */
 .mission-text {
 line-height: 0.5;
 }
 
-/*  Style the TEA OF THE MONTH section.  */
+
+/*  ******************************************************
+    ********   Style the TEA-OF-THE-MONTH area.   ********
+    ******************************************************
+
+    There are two parts to this section:
+      - Header text,
+      - followed by pictures of each of the teas with associated text below
+        each picture.
+*/
 .tea-otm-container{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  width: 1000px;
+  height: auto;
 }
+
+  .tea-otm-picture-container{
+    display: flex;
+    width: 1000px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+  }
+
+
+  .berryblitz-tea-container,  /* This padding provides spaces between each */
+  .spiced-rum-tea-container,  /* tea and allows the ouside teas to touch */
+  .myrtle-ave-tea-container{  /* the outside edge.  Space-between and space- */
+    padding-right: 50px;      /* around and margin auto didn't yield the */
+  }                           /* desired result to match the spec. */
+
+  .tea-image {
+    display: flex;
+    width: 300px;
+    height: 200px;
+  }
+
+  .tea-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .tea-text h4{
+    margin: 10 0 20 0;
+  }
