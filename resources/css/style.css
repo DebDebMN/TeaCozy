@@ -7,8 +7,8 @@ body {
   color: seashell;
   background-color: black;
   opacity: 0.9;
-  text-align: center;
-  justify-content: center;
+  /* text-align: center; */
+  /* justify-content: center; */
   margin: 0;
 }
 
@@ -88,6 +88,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .mission-img {
@@ -147,6 +148,7 @@ line-height: 0.5;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   width: 1000px;
   height: auto;
 }
@@ -187,7 +189,7 @@ line-height: 0.5;
     There are three locations displayed in a row with a background image.
     */
 
-.locals-container {
+.locals-container {        /* Set up the elements as a column & centered. */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -200,7 +202,7 @@ line-height: 0.5;
 
   .locals-image img {
     max-width: 1200px;
-    max-height: 500px;
+    /* max-height: 500px; */
     width: 1200px;
     height: auto;
     margin-top: 50px;
@@ -218,14 +220,14 @@ line-height: 0.5;
 
   .locations-header {   /* Position the header text on top of the image. */
     position:relative;
-    top: -450px;
+    top: -715px; /* added 245 - was 450*/
     z-index: 60;
     margin: 0;
   }
 
   .locations-boxes {   /*  Set up the behaviour of the three location boexes, */
     position:relative; /*  and position on top of the image. */
-    top: -455px;
+    top: -730px; /* added 245 - was 455 */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -245,4 +247,74 @@ line-height: 0.5;
 
   .location-text {
     text-align: center;
+  }
+
+  /*  ***********************************************
+      ********   Style the FOOTER area.   ********
+      ***********************************************
+
+      There are two parts to this section:  the company title, and contact info.
+  */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .footer-box {
+    display: flex;
+    position:relative; /*  and position on top of the image. */
+    top: -560px; /* added 245 - was 455 */
+    width: 1200px;
+    height: 220px;
+    background-color: black;
+    opacity: 1;
+
+    flex-direction: row;
+    justify-content: center;
+    z-index: 70;
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+
+  .footer-text h2 {
+    margin-top: 15px;
+  }
+
+
+  /*  ***********************************************
+      ********   Style the FOOTER area.   ********
+      ***********************************************
+
+      There is only one line however it has to be placed is the specified place.
+  */
+  .copyrt-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: center;
+
+  }
+
+  .copyrt-box {
+    display: flex;
+    position:relative; /*  and position on top of the image. */
+    top: -600px; /* added 245 - was 455 */
+    width: 1200px;
+    height: 40px;
+    background-color: black;
+    opacity: 1;
+
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    z-index: 80;
+  }
+
+  .copyrt-text {
+  margin-left: 20px;
   }
